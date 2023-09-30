@@ -2,9 +2,9 @@
 const dictionary = {
     adjectives: ["hungry", "sleepy", "ugly", "wonderful", "polite", "handsome", "ashamed", "talented", "awesome", "terrible", "dumb", "silly", "happy", "confused", "sour", "sweet", "salty", "determined", "fearless", "scary", "spooky", "hilarious", "rad", "cool", "beautiful", "haunted", "cursed"],
     person: ["mother", "father", "sister", "brother", "grandma", "husband", "wife", "aunt", "uncle", "grandpa", "son", "daughter", "teacher", "student", "college student", "doctor", "police officer", "software engineer", "trick-or-treater", "violin teacher", "ghost", "witch", "wizard", "zombie", "vampie", "werewolf"],
-    place: ["school", "workplace", "grocery store", "Safeway", "college", "hospital", "house", "farm", "tech startup", "nuclear power plant", "graveyard", "mausoleum", "spirit world", "jail", "sewer", "forest", "cave", "fortune teller", "corn maze", "secret passage", "underworld"],
-    thing: ["carrot", "apple", "orange", "computer", "house", "rotisserie-chicken", "cake", "homework", "portfolio-project", "pumpkin", "potion", "poison apple", "spellbook", "jack-o-lantern", "broom", "cauldron", "tombstone", "eye of newt", "pentagram", "candy corn", "corpse"],
-    things: ["fruits", "vegetables", "legumes", "eyeballs", "cobwebs", "toenails", "voodoo dolls", "noodles", "flowers", "video games", "clothes", "groceries", "halloween decorations", "autumn leaves", "spiders", "snacks"],
+    place: ["school", "workplace", "Target", "grocery store", "Safeway", "college", "hospital", "house", "farm", "coding bootcamp", "nuclear power plant", "graveyard", "mausoleum", "spirit world", "jail", "sewer", "forest", "cave", "sceance room", "corn maze", "secret passage", "underworld", "morgue"],
+    thing: ["carrot", "apple", "orange", "computer", "rotisserie-chicken", "cake", "homework assignment", "portfolio-project", "pumpkin", "potion", "poison apple", "spellbook", "jack-o-lantern", "broom", "cauldron", "tombstone", "eye of newt", "pentagram", "candy corn", "corpse"],
+    things: ["fruits", "vegetables", "legumes", "eyeballs", "cobwebs", "toenails", "voodoo dolls", "noodles", "flowers", "video games", "clothes", "groceries", "halloween decorations", "autumn leaves", "spiders", "snacks", "severed heads"],
     verb: ["eat", "sleep", "run", "walk", "cry", "laugh", "haunt", "cast a spell", "cackle", "do a ritual"],
     verbed: ["ate", "slept", "ran", "walked", "cried", "laughed", "haunted", "casted a spell", "cackled", "did a ritual"],
     verbing: ["eating", "sleeping", "running", "walking", "crying", "laughing", "haunting", "casting a spell", "cackling", "doing a ritual"],
@@ -78,6 +78,11 @@ const getMessage = (person, pronounThird, pronounId, pronounPos, pronounPosId) =
     let templates = [
         "I sent my " + person + " to the " + randomPlace() + " to get some " + randomThings() + ". But " + pronounThird + " came back with a " + randomThing() + "!",
         pronounThird + " told me I wasn't allowed to " + randomVerb() + " in the " + randomPlace() + ". I've never felt so " + randomAdjective() +".",
+        "The " + person + " couldn't stop " + randomVerbing() + ".  So " + pronounThird + " asked for a " + randomAdjective() + " " + randomThing() + " from the " + randomPlace() + ".",
+        "If someone's " + randomAdjective() + " " + person + " loses " + pronounPos + " " + randomThing() + " while " + randomVerbing() + ", you should " + randomAdverb() + " give it back to " + pronounId + "!",
+        "A " + person + " found a " + randomThing() + " after " + randomVerbing() + " at the " + randomPlace() + ". How " + randomAdjective() + " of " + pronounId + "!",
+        "Are those " + pronounPosId + "? They're so " + randomAdjective() + "! I wish " + pronounThird + " would share some of those " + randomThings() + " with me...",
+        "There was a " + randomAdjective() + " " + person + " " + randomVerbing() + " in the " + randomPlace() + "."
 
 
 ];
@@ -98,11 +103,5 @@ const generateMessage = () => {
 
 
 
-//Repeater for testing
-// for (let i = 0; i < 20; i++) {
-//     console.log(generatePronoun("teacher"));
-// }
-
 console.log(generateMessage());
 
-console.log("The script has been run successfully! :)");
