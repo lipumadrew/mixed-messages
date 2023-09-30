@@ -85,7 +85,11 @@ const getMessage = (person, pronoun) => {
 const generateMessage = () => {
     let person = randomPerson();
     let pronoun = generatePronoun(person);
-    return getMessage(person, pronoun);
+    let message = getMessage(person, pronoun);
+    const capitalized =
+    message.charAt(0).toUpperCase()
+    + message.slice(1);
+    return capitalized
 }
 
 
