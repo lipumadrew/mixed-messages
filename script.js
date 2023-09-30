@@ -11,7 +11,9 @@ const dictionary = {
     adverb: ["always", "never", "quickly", "slowly", "sometimes", "usually", "rarely"]
 };
 
-
+function randomlySelectFromArray(array) {
+    return array[Math.floor(Math.random() * array.length)]
+}
 
 
 
